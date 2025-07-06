@@ -41,6 +41,16 @@ python setup.py install
 uv run --active ../.venv/bin/python3 setup.py install
 ```
 
+Please make sure that your python env have been added packages `setuptools` and `wheel` before you installing.
+
+```bash
+## conda env
+pip install setuptools wheel
+
+## uv env
+uv add setuptools wheel
+```
+
 # Further info
 
 ## Output files
