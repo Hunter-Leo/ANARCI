@@ -31,15 +31,6 @@ class CustomInstallCommand(install):
        shutil.copy( "curated_alignments/germlines.py", ANARCI_LOC )
        os.mkdir(os.path.join(ANARCI_LOC, "dat"))
        shutil.copytree( "HMMs", os.path.join(ANARCI_LOC, "dat/HMMs/") )
-      
-      # Remove data from HMMs generation
-       try:
-           shutil.rmtree("curated_alignments/")
-           shutil.rmtree("muscle_alignments/")
-           shutil.rmtree("HMMs/")
-           shutil.rmtree("IMGT_sequence_files/")
-       except OSError:
-           pass
 
 setup(name='anarci',
      version='1.3',
