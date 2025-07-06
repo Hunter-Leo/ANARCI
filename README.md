@@ -30,11 +30,15 @@ ANARCI -i myfile.fasta
 
 The easiest way to install ANARCI and its dependencies is using conda
 
-```python
-conda install -c conda-forge biopython -y
-conda install -c bioconda hmmer=3.3.2 -y
+```bash
+conda create -n bio python=3.11
+conda activate bio
+conda install -c conda-forge -c bioconda hmmer -y
+conda install -c conda-forge -c bioconda blast -y
 cd ANARCI
 python setup.py install
+# if you use uv/.venv, choose the python interpreter you use
+uv run --active ../.venv/bin/python3 setup.py install
 ```
 
 # Further info
