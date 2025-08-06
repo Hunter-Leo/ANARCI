@@ -38,7 +38,9 @@ conda install -c conda-forge -c bioconda blast -y
 cd ANARCI
 python setup.py install
 # if you use uv/.venv, choose the python interpreter you use
-uv run --active ../.venv/bin/python3 setup.py install
+uv run ~/where/ANARCI/setup.py install
+or
+~/where/bin/python3 ~/where/ANARCI/setup.py install
 ```
 
 Please make sure that your python env have been added packages `setuptools` and `wheel` before you installing.
