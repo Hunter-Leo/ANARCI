@@ -32,6 +32,11 @@ class CustomInstallCommand(install):
        os.mkdir(os.path.join(ANARCI_LOC, "dat"))
        shutil.copytree( "HMMs", os.path.join(ANARCI_LOC, "dat/HMMs/") )
 
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)  # Change to the directory where setup.py is located
+print("INFO: Current working directory:", os.getcwd())
+
 setup(name='anarci',
      version='1.3',
      description='Antibody Numbering and Receptor ClassIfication',
